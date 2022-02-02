@@ -3,39 +3,58 @@
 }
 
 .team-list {
-  display: flex;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+  }
 }
 
-.team-list__item:not(:last-child) {
-  margin-right: 30px;
+.team-list__item {
+  margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    width: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc(100% / 4 - 30px);
+  }
 }
+
+// .team-list__item:not(:last-child) {
+//   margin-right: 30px;
+// }
 
 .team__title {
-  @include font(700, 36px, 42px);
-  // font-weight: 700;
-  // font-size: 36px;
-  // line-height: calc(42 / 36);
-  // letter-spacing: 0.03em;
+  @include font(null, 28px, 33px);
   color: var(--primary-text-color);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    @include font(null, 36px, 42px);
+    margin-bottom: 50px;
+  }
 }
 .team-list__name {
-  @include font($fs: 16px, $lh: 19px);
-  // font-weight: 500;
-  // font-size: 16px;
-  // line-height: calc(19 / 16);
-  // letter-spacing: 0.03em;
+  @include font();
   color: var(--primary-text-color);
   margin-bottom: 10px;
+
+  @media screen and (min-width: 768px) and (min-width: 1200px) {
+    @include font(null, 16px, 19px, null);
+  }
 }
 .team-list__profession {
-  @include font(null, 16px, 19px);
-  // font-size: 16px;
-  // line-height: calc(19 / 16);
-  // letter-spacing: 0.03em;
+  @include font(400);
   color: var(--secondary-text-color);
   margin-bottom: 16px;
+
+  @media screen and (min-width: 768px) and (min-width: 1200px) {
+    @include font(null, 16px, 19px, 0.03em);
+  }
 }
 
 .team-social {

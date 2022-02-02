@@ -2,14 +2,14 @@
   display: flex;
   padding-top: 0;
   padding-bottom: 94px;
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 
 .activities__title {
   @include font(700, 36px, 42px);
-  // font-weight: 700;
-  // font-size: 36px;
-  // line-height: calc(42 / 36);
-  // letter-spacing: 0.03em;
   color: var(--primary-text-color);
   margin-bottom: 50px;
   text-align: center;
@@ -17,14 +17,16 @@
 
 .activities-list {
   display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
 }
 
 .activities__photos {
+  margin-bottom: 30px;
   position: relative;
-  width: 370px;
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
+  width: calc(100% / 3 - 30px);
+  margin-left: 30px;
 }
 
 .activities__thumb {
@@ -40,10 +42,6 @@
 
 .activities__card-title {
   @include font(700);
-  // font-weight: 700;
-  // font-size: 14px;
-  // line-height: calc(16 / 14);
-  // letter-spacing: 0.03em;
   text-align: center;
   text-transform: uppercase;
   color: var(--main-title-color);
