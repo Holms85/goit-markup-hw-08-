@@ -1,3 +1,9 @@
+.footer-page_general-footer-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .footer-page {
   background-color: var(--hero-bg-col);
   padding-top: 60px;
@@ -14,21 +20,22 @@
 }
 
 .footer-page__logo {
-  width: 145px;
-  height: 31px;
+  // width: 145px;
+  // height: 31px;
   font-family: "Raleway";
-  font-weight: 700;
-  font-size: 26px;
-  line-height: calc(31 / 26);
-  letter-spacing: 0.03em;
+  @include font(700, 24px, 28px);
+  // font-weight: 700;
+  // font-size: 26px;
+  // line-height: calc(31 / 26);
+  // letter-spacing: 0.03em;
   color: var(--accent-color);
 }
 .footer-page__logo--wite {
   color: var(--footer-logo);
 }
 .foter-page__address-card {
-  width: 231px;
-  height: 81px;
+  // width: 231px;
+  // height: 81px;
   font-style: inherit;
   margin-top: 20px;
 }
@@ -116,17 +123,19 @@
 
 .email-form__send {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  // justify-content: space-between;
+  justify-content: center;
 }
 
 .email-form__text {
-  width: 358px;
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: transparent;
-  margin-right: 12px;
+  // margin-right: 12px;
   outline: none;
   padding: 15px 16px;
   &::placeholder,
@@ -138,6 +147,7 @@
     // letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
   }
+  margin-bottom: 20px;
 }
 
 .email-form__btn {
