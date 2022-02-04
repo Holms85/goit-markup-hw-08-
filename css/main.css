@@ -662,10 +662,15 @@ header .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-page_general-footer-div {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 .footer-page {
@@ -683,20 +688,53 @@ header .container {
           align-items: baseline;
 }
 
-.footer-page__contacts {
-  margin-bottom: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+@media screen and (max-width: 1199px) {
+  .footer-page__container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 @media screen and (max-width: 767px) {
   .footer-page__contacts {
     width: 100%;
+    margin-bottom: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-page__contacts {
+    margin-right: 165px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-page__contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-page__contacts {
+    margin-right: 70px;
   }
 }
 
@@ -707,9 +745,23 @@ header .container {
   line-height: 1.16667;
   letter-spacing: 0.03em;
   color: var(--accent-color);
-  margin-bottom: 20px;
-  margin-right: auto;
-  margin-left: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-page__logo {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-page__logo {
+    font-size: 26px;
+    line-height: 1.19231;
+    letter-spacing: 0.03em;
+    width: 145px;
+    height: 31px;
+  }
 }
 
 .footer-page__logo--wite {
@@ -719,16 +771,28 @@ header .container {
 .foter-page__address-card {
   font-style: inherit;
   margin-top: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+@media screen and (max-width: 1199px) {
+  .foter-page__address-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .foter-page__address-card {
+    width: 231px;
+    height: 81px;
+  }
 }
 
 .address-card__text {
@@ -744,8 +808,20 @@ header .container {
   margin-top: 8px;
 }
 
+@media screen and (min-width: 1200px) {
+  .address-card__address-list {
+    margin-top: 9px;
+  }
+}
+
 .address-list_item--mb {
   margin-bottom: 8px;
+}
+
+@media screen and (min-width: 1200px) {
+  .address-list_item--mb {
+    margin-bottom: 9px;
+  }
 }
 
 .address-list__email,
@@ -769,19 +845,38 @@ header .container {
   margin-bottom: 60px;
 }
 
+@media screen and (min-width: 768px) {
+  .footer-page__social {
+    padding-top: 5px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-page__social {
+    margin-bottom: 0;
+    margin-right: 93px;
+  }
+}
+
 .footer-page-social__title {
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.14286;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-page-social__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .footer-social {
@@ -843,16 +938,31 @@ header .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+@media screen and (max-width: 1199px) {
+  .email-form__send {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .email-form__send {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .email-form__text {
-  width: 100%;
-  max-height: 50px;
+  min-width: 450px;
+  min-height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -895,15 +1005,21 @@ header .container {
   color: rgba(255, 255, 255, 0.6);
 }
 
+@media screen and (min-width: 1200px) {
+  .email-form__text {
+    margin-bottom: 0;
+    margin-right: 12px;
+    min-width: 358px;
+  }
+}
+
 .email-form__btn {
-  width: 200px;
-  height: 50px;
   font-weight: 700;
   font-size: 16px;
-  line-height: calc(30 / 16);
+  line-height: 1.875;
   letter-spacing: 0.06em;
   color: #ffffff;
-  padding-left: 29px 10px 8px;
+  padding: 8px 26px 8px 27px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
