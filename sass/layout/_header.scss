@@ -1,10 +1,15 @@
 .head {
+  position: relative;
   border-bottom: 1px solid #ececec;
 }
 
-header .container {
-  display: flex;
-  align-items: center;
+// header .container {
+//   display: flex;
+//   align-items: center;
+// }
+
+.site-nav {
+  display: none;
 }
 
 .site-nav-list {
@@ -72,6 +77,7 @@ header .container {
 
 .contaсts {
   margin-left: auto;
+  display: none;
 }
 
 .contaсts__email,
@@ -107,4 +113,95 @@ header .container {
 
 .contacts__item:not(:last-child) {
   margin-right: 50px;
+}
+
+.btn-mob-menu-open {
+  min-width: 40px;
+  min-height: 40px;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-mob-menu {
+  position: fixed;
+  background-color: var(--body-bg-color);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  padding: 48px 40px;
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.btn-mob-menu-close {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  right: 15px;
+  min-width: 40px;
+  min-height: 40px;
+  background-color: var(--body-bg-color);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mob-menu-list {
+  position: relative;
+}
+
+.mob-menu-list__link {
+  position: relative;
+  @include font(500, 40px, 47px, 0.02em);
+  color: #212121;
+}
+
+.current--mob {
+  color: var(--accent-color);
+}
+
+.mob-menu-list__item,
+.contacts-mob__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.contacts-mob__tel {
+  @include font(500, 34px, 40px, 0.02em);
+}
+
+.contacts-mob__email {
+  @include font(500, 24px, 28px, 0.02em);
+}
+
+.mob-menu-social {
+  display: flex;
+  margin-top: 64px;
+}
+
+.mob-menu-social__item {
+  &:not(:last-child)::after {
+    content: "";
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 22px;
+    height: 0;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    transform: rotate(90deg);
+  }
+}
+
+.mob-menu-social__link {
+  @include font(500, 18px, 22px, 0.02em);
+  color: #2196f3;
 }
