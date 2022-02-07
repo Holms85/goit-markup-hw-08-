@@ -8,20 +8,12 @@ header .container {
   align-items: center;
 }
 
-.site-nav {
-  @media screen and (max-width: 767px) {
-    display: none;
+.site-nav-list {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
   }
 }
-
-.site-nav-list {
-  display: flex;
-}
-
-// .logo-header {
-//   // margin-right: 93px;
-//   // padding: 24px 0 25px 0;
-// }
 
 .logo-header {
   font-family: "Raleway", sans-serif;
@@ -77,9 +69,7 @@ header .container {
 }
 
 .contaсts {
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
+  display: none;
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -92,12 +82,6 @@ header .container {
     flex-direction: row;
   }
 }
-
-// .contaсts__email,
-// .contacts__tel {
-//   display: flex;
-//   align-items: center;
-// }
 
 .contaсts__email-icon {
   margin-right: 10px;
