@@ -132,8 +132,8 @@
 
 .card-set__photo-text {
   @include font(null, 16px, 30px);
-   // font-size: 16px;
-    // line-height: calc(30 / 16);
-    // letter-spacing: 0.03em;
-    color: var(--secondary-text-color);
+  // font-size: 16px;
+  // line-height: calc(30 / 16);
+  // letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
 }
