@@ -123,14 +123,20 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 77px;
-  left: 24px;
+  top: 10px;
+  left: 5px;
   opacity: 0;
   transition: opacity var(--time-hov-fok--) var(--cubic-bezier--);
   .card-set__link:hover &,
   .card-set__link:focus & {
     opacity: 1;
   }
+  @media screen and (min-width: 480px) {
+    top: 77px;
+    left: 24px;
+    width: 402px;
+  }
+
   @media screen and (min-width: 768px) {
     top: 49px;
     width: 306px;
